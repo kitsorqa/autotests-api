@@ -7,8 +7,8 @@ import user_service_pb2_grpc
 class UserServiceServicer(user_service_pb2_grpc.UserServiceServicer):
     def GetUser(self, request, context):
         print(f"Запрос на GetUser от юзера: {request.username}")
-        if request.username == 'German':
-            return user_service_pb2.GetUserResponse(message=f"Ты пидор, {request.username}")
+        if request.username == 'Dog':
+            return user_service_pb2.GetUserResponse(message=f"Ты не человек, {request.username}")
         return user_service_pb2.GetUserResponse(message=f"Привет, {request.username}")
 
 
